@@ -1,5 +1,5 @@
 # E for Everything
 
-### It is an e-commerce website created using ReactJS and NodeJS
+### It's a backend for [https://e-for-everything-client.vercel.app](e-for-everything) created with NodeJS Express and mongodb atlas.
 
-Live version - https://e-for-everything.herokuapp.com/
+Live version - https://e-for-everything-server.vercel.app
