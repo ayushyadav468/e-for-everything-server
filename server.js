@@ -52,20 +52,9 @@ app.use('/api/auth/product', productPrivateRoutes);
 app.use('/api/auth/review', reviewPrivateRoutes);
 
 // Check for development or production
-if (process.env.NODE_ENV === 'production') {
-	// get build files in server
-	app.use(express.static(path.join(__dirname, '/client/build')));
-
-	// every get request is send to index.html in /client/build
-	// react will handle rest
-	app.get('*', (req, res) => {
-		res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-	});
-} else {
-	app.use('/', (req, res) => {
-		res.send('App is running in development mode');
-	});
-}
+app.use('/', (req, res) => {
+	res.send('App is running in development mode');
+});
 
 // Listen
 const port = process.env.PORT || 8000;
